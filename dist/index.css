@@ -1,0 +1,348 @@
+:root {
+  --lidth: 320px;
+}
+
+* {
+  scrollbar-color: #737373 #38383D6B;
+  scrollbar-width: thin;
+}
+
+* { box-sizing: border-box; }
+
+:focus {
+  outline: none !important;
+}
+
+body {
+  font-family: Zilla Slab, sans-serif;
+  font-size: 18px;
+  background: #04060c;
+  display: grid;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}
+
+*::selection {
+  color: inherit;
+  background-color: #fff6f600;
+}
+
+input::selection {
+  color: #000073;
+  background-color: #fff6f6;
+}
+label::selection {
+  color: #000073;
+  background-color: #fff6f6;
+}
+
+#toolbar-context-menu {
+  display: none !important;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 16px;
+  min-height: 100vh;
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #2d3848;
+  padding: 24px;
+  box-shadow: 0px 0px 16px 999rem rgba(4, 8, 16, 0.6);
+  border-radius: 8px;
+  transition-delay: 0ms;
+  transition-duration: 800ms;
+  transition-timing-function: ease-in-out;
+  margin: 0;
+}
+
+.menu li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  width: var(--lidth);
+}
+
+.status { display: flex; }
+
+.status span {
+  margin-left: auto;
+  padding: 8px 0px;
+}
+
+.winloose {
+  background-size: cover;
+  margin-left: auto;
+  height: 128px;
+  width: 128px;
+  position: absolute;
+  right: -24px;
+  top: -24px;
+  transform: rotateZ(24deg);
+}
+
+.poopswin {
+  background-image: url("images/poop.png");
+}
+
+.Junior {
+  background-image: url("images/boy.png");
+}
+.Middle {
+  background-image: url("images/bearded_person.png");
+}
+.Senior {
+  background-image: url("images/wizard.png");
+}
+.Custom {
+  background-image: url("images/alien.png");
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.height, .width {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #0007;
+  box-shadow: 0px 2px 7px rgba(253, 247, 239, 0.6);
+  border-top-color: #fffa;
+  border-top-style: dashed;
+  border-top-width: 2px;
+  border-right-color: #fffb;
+  border-right-style: dashed;
+  border-right-width: 2px;
+  border-bottom-color: #fffb;
+  border-bottom-style: dashed;
+  border-bottom-width: 2px;
+  border-left-color: #fffb;
+  border-left-style: dashed;
+  border-left-width: 2px;
+  transition-timing-function: easy;
+  transition-delay: 0s;
+  transition-duration: 700ms;
+}
+.select:hover {
+  font-weight: bold;
+  color: #000d;
+  background-color: #fffd;
+  box-shadow: 0px 2px 12px 2px rgba(253, 247, 239, 0.6);
+  border-top-color: #fffc;
+  border-top-style: dashed;
+  border-top-width: 3px;
+  border-right-color: #fffe;
+  border-right-style: dashed;
+  border-right-width: 3px;
+  border-bottom-color: #fffe;
+  border-bottom-style: dashed;
+  border-bottom-width: 3px;
+  border-left-color: #fffe;
+  border-left-style: dashed;
+  border-left-width: 3px;
+}
+
+.buttons {
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  flex-direction: column;
+  position: absolute;
+  width: calc(var(--lidth) - 16px);
+  background-color: #252f3a;
+  top: 108px;
+  transition-timing-function: easy;
+  transition-duration: .2s;
+}
+
+.img {
+  height: 2rem;
+  padding-right: 8px;
+}
+
+.error_block {
+  position: fixed;
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  align-self: center;
+  visibility: hidden;
+  border-radius: 8px;
+  opacity: 0;
+  background-color: #311;
+  box-shadow: 0px 0px 16px 999rem rgba(4, 8, 16, 0.6);
+  transition-duration: .5s;
+  transition-timing-function: ease-in;
+  transform: translateY(1200px);
+  max-width: 320px;
+}
+.error_block p {
+  margin: 0px 0px 16px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+  height: 40px;
+  /* padding: 8px 8px; */
+  border-radius: 4px;
+  color: #fff;
+  background: linear-gradient(#0000, #0004);
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0s;
+  transition-duration: .2s;
+}
+.btn:hover {
+  /* padding: 12px !!important; */
+  border: 0;
+  font-weight: bold;
+  color: #000d;
+  background-color: #fffe;
+  box-shadow: 0px 2px 12px 2px rgba(253, 247, 239, 0.6);
+}
+
+.menu input {
+  padding: 8px 8px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #0004;
+  border: none;
+  width: 100%;
+}
+
+.menu label {
+  padding: 0px 0px 8px;
+}
+
+.height {
+  margin-left: auto;
+}
+
+.sweep_the_poops {
+  color: #fff;
+  padding: 12px;
+  font-size: 20 px;
+  background-color: rosybrown;
+  border: 0;
+  border-radius: 4px;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
+
+.sweep_the_poops:hover {
+  background-color: #af6262;
+}
+
+.hide_menu {
+  visibility: visible;
+  opacity: 0;
+  transform: translateY(-1200px);
+}
+
+.field {
+  display: grid;
+  grid-template-rows: auto;
+  transition: 1s ease-out 0s;
+  grid-gap: 10px;
+}
+
+.tile {
+  color: #fffd;
+  padding: 4px 9px;
+  width: 40px;
+  height: 40px;
+  background-color: #062227;
+  border: 2px solid #fffa;
+  border-radius: 4px;
+  transition: 0.3s;
+  font-size: 20px;
+}
+.tile:hover {
+  box-shadow: 0px 0px 16px 8px rgba(253, 247, 239, 0.8);
+  background-color: #fffb
+}
+
+.choosen {
+  background-color: #0000;
+  border-radius: 20px;
+  border: 2px solid #fffa;
+  transition-duration: .8s;
+}
+.choosen:hover {
+  background-color: #4e0707cc;
+  box-shadow: 0px 0px 16px 8px #4e0707cc;
+}
+
+.empty {
+  background-color: #0000;
+  border: 2px solid #fff4;
+  border-radius: 8px;
+  transition-duration: .4s;
+}
+.empty:hover {
+  background-color: #143546;
+  box-shadow: 0px 0px 16px 8px #143546;
+}
+
+.flaged {
+  background-color: rosybrown;
+}
+.flaged:hover {
+  background-color: #ecd4d4;
+  box-shadow: 0px 0px 16px 8px #ecd4d4;
+}
+
+.poop {
+  background-image: url("images/poop.png");
+  background-size: cover;
+  background-color: #fff0;
+  border: 0;
+}
+.poop:hover {
+  background-color: #0000;
+  box-shadow: 0px 0px 16px 8px #000;
+}
+
+@media (max-width: 442px) {
+  .menu li {
+    --lidth: 75vw;
+  }
+}

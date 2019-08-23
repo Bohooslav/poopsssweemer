@@ -1,0 +1,43 @@
+{
+  "name": "Poopsssweemer",
+  "description": "Sweem the poops!",
+  "keywords": [
+    "imba",
+    "electron",
+    "poops"
+  ],
+  "author": "Павлишинець Богуслав",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "webpack-dev-server --mode=development --content-base dist/",
+    "build": "webpack --mode=production",
+    "watch": "webpack --watch --progress --colors --display-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/taw/imba-electron-hello-world.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "css-loader": "^1.0.1",
+    "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "imba": "1.4.1",
+    "jquery": "^3.4.1",
+    "normalize-scss": "^7.0.1",
+    "style-loader": "^0.23.1",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "devDependencies": {
+    "electron": "^6.0.3",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.3.1",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  }
+}
