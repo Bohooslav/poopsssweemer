@@ -174,7 +174,7 @@ label::selection {
   position: absolute;
   width: calc(var(--lidth) - 16px);
   background-color: #252f3a;
-  top: 108px;
+  top: 102px;
   transition-timing-function: easy;
   transition-duration: .2s;
 }
