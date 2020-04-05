@@ -1,4 +1,4 @@
-# [Poopsssweemer](https://bohooslav.github.io/poopsssweemer/dist/index.html)
+# [Poopsssweeper](https://bohooslav.github.io/poopsssweemer/dist/)
 
 ![Play now!](https://bohooslav.github.io/poopsssweemer/dist/)
 
